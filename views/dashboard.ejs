@@ -18,17 +18,23 @@
         </nav>
     </header>
     <main>
-        <section class="dashboard">
-            <h2>Welcome, <%= user.username %>!</h2>
+        <section class="account-details">
+            <h2>Bank Account</h2>
+            <p>Name: <%= user.username %></p>
             <p>Email: <%= user.email %></p>
-            <p>Balance: $<%= user.balance.toFixed(2) %> in your account</p>
-            <button onclick="window.location.href='/deposit'">Deposit</button>
-            <button onclick="window.location.href='/withdraw'">Withdraw</button>
+            <p>Account Balance: $<%= user.balance.toLocaleString() %></p>
+            <p>Bank Status: <span class="status">Active &#x2714;</span></p>
+            <button id="depositBtn">Deposit</button>
+            <button id="withdrawBtn">Withdraw</button>
+        </section>
+        <section id="depositPage" class="hidden">
+            <h2>Official/Government Deposit Only</h2>
         </section>
     </main>
     <footer>
         <p>&copy; 2024 Bank Of America. All rights reserved.</p>
     </footer>
+    <script src="/scripts.js" defer></script>
 </body>
 </html>
 
