@@ -69,3 +69,12 @@ app.listen(3000, () => {
     console.log('Server running on port 3000');
 });
 
+document.getElementById('depositBtn').addEventListener('click', function() {
+    document.getElementById('depositPage').classList.remove('hidden');
+    document.querySelector('.account-details').classList.add('hidden');
+});
+
+document.getElementById('withdrawBtn').addEventListener('click', function() {
+    alert('Withdraw function not available.');
+});
+
