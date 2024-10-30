@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Bank Of America</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
+                <li><a href="/dashboard">Dashboard</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="dashboard">
+            <h2>Welcome, <%= user.username %>!</h2>
+            <p>Email: <%= user.email %></p>
+            <p>Balance: $<%= user.balance.toFixed(2) %> in your account</p>
+            <button onclick="window.location.href='/deposit'">Deposit</button>
+            <button onclick="window.location.href='/withdraw'">Withdraw</button>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Bank Of America. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+
